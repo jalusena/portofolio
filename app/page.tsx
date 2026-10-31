@@ -182,7 +182,10 @@ export default function Home() {
           </Section>
 
           {/* Pengalaman */}
-          <Section id="pengalaman" title="Pendidikan dan pengalaman organisasi" desc="Latar belakang pendidikan dan peran saya di organisasi kampus maupun komunitas." tint>
+          <Section id="pengalaman" title="Pendidikan dan pengalaman" desc="Pengalaman kerja, pendidikan, dan peran saya di organisasi kampus maupun komunitas." tint>
+            <Reveal className="mb-6">
+               <Panel title="Pengalaman kerja"><Timeline items={workExperience} /></Panel>
+            </Reveal>
             <div className="grid items-stretch gap-6 lg:grid-cols-2">
               <Reveal><Panel title="Pendidikan"><Timeline items={education} /></Panel></Reveal>
               <Reveal delay={150}><Panel title="Pengalaman organisasi"><Timeline items={organisations} /></Panel></Reveal>

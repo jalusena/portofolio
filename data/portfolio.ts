@@ -66,6 +66,15 @@ export const organisations = [
   },
 ];
 
+export const workExperience = [
+  {
+    title: "Puldatan, Program PTSL",
+    place: "Kementerian ATR/BPN, Desa Wringinanom",
+    date: "Mei 2023 - November 2025",
+    note: "Program Pendaftaran Tanah Sistematis Lengkap (PTSL) 2023 di Desa Wringinanom.",
+  },
+];
+
 export const achievements = [
   {
     rank: "2",
