@@ -14,7 +14,7 @@ import {
   projects,
 } from "@/data/portfolio";
 
-const CV = "/files/CV_Jalu_Sena_Purwa_Andhika.pdf";
+const CV = "/cv-jalu.pdf";
 const GMAIL = `https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`;
 const WA = `https://wa.me/${profile.whatsapp}`;
 
