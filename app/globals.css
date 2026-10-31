@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: #1f7bb8;
+  --color-brand-dark: #175f8f;
+  --color-navy: #14324a;
+  --color-muted: #587386;
+  --color-line: #d3e6f3;
+  --color-sky: #e8f4fb;
+  --color-paper: #f7fbfe;
+  --font-sans: var(--font-jakarta);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-navy);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes drift {
+  to { transform: rotate(360deg); }
+}
+@keyframes ping-dot {
+  75%, 100% { transform: scale(2.4); opacity: 0; }
+}
+
+/* Semua animasi hanya aktif jika pengguna tidak mematikan animasi di perangkatnya. */
+@media (prefers-reduced-motion: no-preference) {
+  .anim-up { animation: fade-up 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0ms); }
+  .anim-pop { animation: pop-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0ms); }
+  .float { animation: float 6s ease-in-out infinite; }
+  .float-slow { animation: float 8s ease-in-out infinite; animation-delay: -3s; }
+  .drift { animation: drift 16s linear infinite; }
+  .ping-dot { animation: ping-dot 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); transition-delay: var(--d, 0ms); }
+  .reveal.is-visible { opacity: 1; transform: none; }
+
+  .stagger > * { opacity: 0; }
+  .is-visible .stagger > * { animation: fade-up 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 90ms + 150ms); }
+}
