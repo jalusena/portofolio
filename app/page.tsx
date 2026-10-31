@@ -8,6 +8,7 @@ import {
   skills,
   education,
   organisations,
+  workExperience,
   achievements,
   trainings,
   certifications,
