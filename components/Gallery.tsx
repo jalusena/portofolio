@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { gallery, type Category } from "@/data/portfolio";
 
-const order: Category[] = ["Organisasi", "Prestasi", "Pelatihan", "Sertifikasi"];
+const order: Category[] = ["Pekerjaan" ,"Organisasi", "Prestasi", "Pelatihan", "Sertifikasi"];
 
 export default function Gallery() {
   // Hanya kartu yang sudah punya foto yang ditampilkan.

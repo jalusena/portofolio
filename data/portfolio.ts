@@ -34,7 +34,7 @@ export const education = [
   },
   {
     title: "SMK PGRI 2 Ponorogo",
-    place: "Pendidikan Menengah Kejuruan",
+    place: "Rekayasa Perangkat Lunak",
     date: "2019-2022",
   },
 ];
@@ -95,6 +95,10 @@ export const trainings = [
     title: "Pelatihan Data Analyst",
     desc: "Pengembangan kemampuan analisis data dasar.",
   },
+  {
+    title: "LKMM-TD",
+    desc: "Latihan Kepemimpinan dan Manajemen Mahasiswa Tingkat Dasar.",
+  },
 ];
 
 export const certifications = [
@@ -110,15 +114,11 @@ export const certifications = [
     title: "Sertifikasi Bahasa Inggris",
     desc: "Kompetensi bahasa Inggris.",
   },
-  {
-    title: "LKMM-TD",
-    desc: "Latihan Kepemimpinan dan Manajemen Mahasiswa Tingkat Dasar.",
-  },
 ];
 
 // images = daftar nama file foto di folder public/images (tulis persis sama, termasuk huruf besar/kecil dan ekstensi).
 // Kartu yang images-nya kosong ([]) tidak ditampilkan. Isi nanti kalau fotonya sudah ada.
-export type Category = "Organisasi" | "Prestasi" | "Pelatihan" | "Sertifikasi";
+export type Category =  "Pekerjaan" | "Organisasi" | "Prestasi" | "Pelatihan" | "Sertifikasi";
 
 export const gallery: {
   category: Category;
@@ -126,15 +126,16 @@ export const gallery: {
   title: string;
   desc: string;
 }[] = [
-  { category: "Organisasi", images: [], title: "DPD KNPI Ponorogo", desc: "Kegiatan organisasi tingkat kabupaten." },
+  { category: "Pekerjaan", images: ["ptsl1.jpg", "ptsl2.jpeg", "ptsl3.jpg"], title: "Program PTSL Desa Wringinanom", desc: "Dokumentasi kegiatan sebagai puldatan Program PTSL." },
+  { category: "Organisasi", images: ["knpi.jpeg"], title: "DPD KNPI Ponorogo", desc: "Kegiatan organisasi tingkat kabupaten." },
   { category: "Organisasi", images: ["bem.jpeg", "bem2.jpeg"], title: "BEM Fakultas Teknik", desc: "Masa jabatan sebagai Kepala Departemen Sosial Masyarakat." },
   { category: "Organisasi", images: ["genbi.jpeg", "genbi2.jpeg"], title: "GenBI", desc: "Kegiatan Divisi Pendidikan." },
   { category: "Organisasi", images: ["kaltar.JPG", "kaltar2.JPG"], title: "Karang Taruna Wringinanom", desc: "Kegiatan kepemudaan dan pendidikan tingkat desa." },
   { category: "Prestasi", images: ["juara 2.jpg"], title: "Juara 2, UAD Fair", desc: "Poster Digital Usaha tingkat nasional." },
   { category: "Prestasi", images: ["juara 3.jpg"], title: "Juara 3, UAD Fair", desc: "Video Kreatif Usaha tingkat nasional." },
-  { category: "Pelatihan", images: [], title: "Pelatihan Data Analyst", desc: "Dokumentasi pelatihan analisis data." },
+  { category: "Pelatihan", images: ["pelatihan.jpeg"], title: "Pelatihan Data Analyst", desc: "Dokumentasi pelatihan analisis data." },
   { category: "Sertifikasi", images: ["serkom1.jpg", "serkom2.jpg"], title: "Sertifikasi Microsoft", desc: "Sertifikat kompetensi aplikasi perkantoran." },
-  { category: "Sertifikasi", images: [], title: "Sertifikasi Kewirausahaan", desc: "Sertifikat kompetensi kewirausahaan." },
+  { category: "Sertifikasi", images: ["kwu.jpg"], title: "Sertifikasi Kewirausahaan", desc: "Sertifikat kompetensi kewirausahaan." },
   { category: "Sertifikasi", images: [], title: "Sertifikasi Bahasa Inggris", desc: "Sertifikat kompetensi bahasa Inggris." },
 ];
 
